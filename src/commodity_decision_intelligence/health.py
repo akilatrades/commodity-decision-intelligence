@@ -1,4 +1,4 @@
-"""Small runtime health check used by the Step 1 project skeleton."""
+"""Small runtime health check used by the project smoke test."""
 
 
 def get_project_status() -> dict[str, str]:
@@ -6,5 +6,5 @@ def get_project_status() -> dict[str, str]:
     return {
         "name": "commodity-decision-intelligence",
         "status": "ok",
-        "stage": "step-1-project-skeleton",
+        "stage": "step-2-controlled-sample-data",
     }
