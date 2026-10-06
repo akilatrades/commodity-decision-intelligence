@@ -38,6 +38,9 @@ commodity-decision-intelligence/
 │   └── commodity_decision_intelligence/
 │       ├── __init__.py
 │       ├── __main__.py
+│       ├── health.py
+│       ├── loaders.py
+│       └── models.py
 ├── tests/                      # Automated Python tests
 ├── DATA_POLICY.md
 ├── ENTERPRISE_PILOT.md
@@ -99,7 +102,7 @@ python -m commodity_decision_intelligence
 Expected output:
 
 ```text
-commodity-decision-intelligence | status=ok | stage=step-1-project-skeleton
+commodity-decision-intelligence | status=ok | stage=step-2-controlled-sample-data
 ```
 
 ### 5. Run the automated tests
@@ -108,7 +111,7 @@ commodity-decision-intelligence | status=ok | stage=step-1-project-skeleton
 python -m pytest
 ```
 
-A passing test run confirms that the basic project skeleton is working.
+A passing test run confirms that the package and controlled sample-data ingestion are working.
 
 ## Design principles
 
