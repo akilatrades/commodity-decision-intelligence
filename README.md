@@ -4,13 +4,13 @@ A research and analytics platform for commodity exposure, scenario analysis, ris
 
 ## Status
 
-**Step 1 — Project skeleton complete**
+**Step 2 — Controlled enterprise-shaped sample data complete**
 
 The project is being designed around a **large-enterprise crude market-risk workflow**, while the first implementation remains intentionally small and uses controlled synthetic data.
 
-The repository now contains a runnable Python package, automated smoke tests, a synthetic-data area, and GitHub Actions continuous integration. Commodity calculations have **not** been added yet; that work begins only after the project foundation is proven.
+The repository now contains a runnable Python package, automated tests, GitHub Actions continuous integration, typed input models, deterministic CSV loaders, and a controlled synthetic WTI dataset representing physical exposure, futures hedges, and a market scenario. Commodity exposure calculations have **not** been added yet.
 
-**Next:** Step 2 — controlled enterprise-shaped sample data.
+**Next:** Step 3 — exposure engine.
 
 ## Initial product
 
@@ -33,12 +33,11 @@ The first design target is a crude Market Risk / Supply & Trading Analytics work
 ```text
 commodity-decision-intelligence/
 ├── .github/workflows/          # Automated tests
-├── data/sample/                # Synthetic prototype data only
+├── data/sample/                # Synthetic physical, hedge, and scenario inputs
 ├── src/
 │   └── commodity_decision_intelligence/
 │       ├── __init__.py
 │       ├── __main__.py
-│       └── health.py
 ├── tests/                      # Automated Python tests
 ├── DATA_POLICY.md
 ├── ENTERPRISE_PILOT.md
