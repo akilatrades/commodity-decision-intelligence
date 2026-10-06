@@ -2,20 +2,23 @@
 
 Development is intentionally staged. Each stage has a quality gate. A later stage should not be started merely because the previous code runs once.
 
-## Step 0 — Product definition
+The product is designed around an **enterprise crude market-risk workflow**, but enterprise integrations and security controls will be added only after the analytical core is proven.
 
-**Goal:** Define the user, problem, scope, data rules, and success criteria.
+## Step 0 — Product and enterprise-pilot definition
+
+**Goal:** Define the user, business problem, pilot scope, data rules, success criteria, and enterprise design principles.
 
 Deliverables:
 
 - README
 - project specification
+- enterprise pilot definition
 - data policy
 - roadmap
 
-**Gate:** The first business problem and v0.1 boundaries are clear.
+**Gate:** The first business problem, v0.1 boundaries, enterprise user, and pilot objective are clear.
 
-**Status:** In progress
+**Status:** Complete
 
 ---
 
@@ -31,15 +34,19 @@ Planned items:
 - sample-data directory
 - basic continuous-integration test
 
+**Enterprise reason:** Establish a maintainable, testable foundation before business calculations are added.
+
 **Gate:** The project installs and a trivial automated test passes.
 
 ---
 
-## Step 2 — Controlled sample exposure
+## Step 2 — Controlled enterprise-shaped sample data
 
-**Goal:** Represent one fictional crude-oil exposure in a simple input file.
+**Goal:** Represent one fictional crude business unit with separate physical exposure and futures hedge inputs.
 
-**Gate:** The program can load the sample and display the fields without transforming them incorrectly.
+**Enterprise reason:** Model inputs in a form that could later be supplied by an ETRM export or controlled enterprise feed.
+
+**Gate:** The program can load the samples and preserve identifiers, units, dates, and source fields correctly.
 
 ---
 
@@ -47,21 +54,27 @@ Planned items:
 
 **Goal:** Calculate physical volume, hedged volume, unhedged volume, and hedge percentage.
 
-**Gate:** Python results equal manually calculated results.
+**Enterprise reason:** Exposure is the base layer for scenario, risk, and P&L analysis.
+
+**Gate:** Python results equal manually calculated results and retain calculation traceability.
 
 ---
 
 ## Step 4 — First scenario engine
 
-**Goal:** Apply one flat-price shock to the physical exposure and hedge.
+**Goal:** Apply one flat-price shock to the physical exposure and futures hedge.
+
+**Enterprise reason:** Demonstrate the first end-to-end desk workflow: inputs → scenario → attributed financial impact.
 
 **Gate:** Physical impact, hedge impact, and net result match a hand-worked example.
 
 ---
 
-## Step 5 — Input validation
+## Step 5 — Input validation and controls
 
 **Goal:** Reject missing fields, invalid units, impossible percentages, duplicate records, and non-numeric values.
+
+**Enterprise reason:** A risk system must fail safely instead of producing plausible-looking numbers from bad inputs.
 
 **Gate:** Intentionally bad test files fail for the expected reason.
 
@@ -160,7 +173,7 @@ AI will not be the numerical calculation engine.
 
 ---
 
-## Step 15 — Enterprise readiness
+## Step 15 — Enterprise deployment controls
 
 Potential requirements:
 
@@ -175,6 +188,8 @@ Potential requirements:
 - security controls,
 - ETRM/ERP integration,
 - deployment architecture,
-- licensing review.
+- licensing review,
+- SSO,
+- retention and access policies.
 
-This stage would be required before positioning the system as production enterprise software.
+These controls are required before positioning the system as production enterprise software.
