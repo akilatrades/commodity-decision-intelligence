@@ -1,4 +1,4 @@
-"""Smoke tests for the project skeleton."""
+"""Smoke tests for the project package."""
 
 from commodity_decision_intelligence import __version__
 from commodity_decision_intelligence.health import get_project_status
@@ -12,5 +12,5 @@ def test_project_status_is_deterministic() -> None:
     assert get_project_status() == {
         "name": "commodity-decision-intelligence",
         "status": "ok",
-        "stage": "step-1-project-skeleton",
+        "stage": "step-2-controlled-sample-data",
     }

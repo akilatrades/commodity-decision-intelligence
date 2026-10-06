@@ -44,7 +44,7 @@ Planned items:
 
 ## Step 2 — Controlled enterprise-shaped sample data
 
-**Status:** Next
+**Status:** Complete
 
 **Goal:** Represent one fictional crude business unit with separate physical exposure and futures hedge inputs.
 
@@ -55,6 +55,8 @@ Planned items:
 ---
 
 ## Step 3 — Exposure engine
+
+**Status:** Next
 
 **Goal:** Calculate physical volume, hedged volume, unhedged volume, and hedge percentage.
 

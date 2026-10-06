@@ -1,0 +1,2 @@
+scenario_id,scenario_name,commodity,price_shock,price_unit,source_type,source_name
+SCN-WTI-DOWN-10,WTI down 10 USD per bbl,WTI,-10.00,USD/bbl,synthetic,controlled_sample
