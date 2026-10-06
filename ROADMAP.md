@@ -38,9 +38,13 @@ Planned items:
 
 **Gate:** The project installs and a trivial automated test passes.
 
+**Status:** Complete
+
 ---
 
 ## Step 2 — Controlled enterprise-shaped sample data
+
+**Status:** Next
 
 **Goal:** Represent one fictional crude business unit with separate physical exposure and futures hedge inputs.
 
