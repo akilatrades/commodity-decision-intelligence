@@ -14,25 +14,28 @@ This project aims to build an analytical layer that can combine those inputs and
 
 The long-term goal is a **Commodity Decision Intelligence Platform**.
 
-The first goal is much smaller.
+The product is being **designed for enterprise workflows from the beginning**, but the first implementation is deliberately narrow so the analytical core can be proven before enterprise integrations are added.
 
 ---
 
-## 2. Initial customer
+## 2. Initial enterprise user
 
-The first target user is a **small or mid-sized commodity business or trading team** that has real commodity exposure but does not have a large internal quantitative engineering team.
+The first design target is a **crude Market Risk / Supply & Trading Analytics team inside a large energy or commodity enterprise**.
 
-Examples could eventually include:
+The likely first internal users are people responsible for:
 
-- producers,
-- commodity marketers,
-- fuel distributors,
-- refiners,
-- petrochemical companies,
-- small trading firms,
-- commercial or risk teams.
+- physical and financial exposure,
+- hedge coverage,
+- stress and scenario analysis,
+- risk attribution,
+- management reporting,
+- reconciliation across existing systems.
 
-Large enterprise customers are a long-term target, not the starting implementation target.
+The product is not intended to replace the firm's ETRM. It is intended to sit above existing systems as an analytical and decision-support layer.
+
+The first real commercial engagement, if pursued, should be a narrow desk-level pilot rather than an enterprise-wide rollout.
+
+See [ENTERPRISE_PILOT.md](ENTERPRISE_PILOT.md).
 
 ---
 
@@ -40,9 +43,9 @@ Large enterprise customers are a long-term target, not the starting implementati
 
 The first problem is:
 
-> A company has physical crude-oil exposure and futures hedges. It wants to understand how a market move changes its physical value, hedge value, and remaining exposure.
+> A crude portfolio has physical exposure and futures hedges. The risk or analytics team wants to understand how a market move changes physical value, hedge value, remaining exposure, and which component drives the result.
 
-A simple example:
+A simple controlled example:
 
 - expected production: 100,000 barrels,
 - current crude price: $70 per barrel,
@@ -55,19 +58,26 @@ Before software is trusted, the result must be understandable and reproducible b
 
 ## 4. v0.1 scope
 
-Version 0.1 will use **controlled sample data** for a fictional crude-oil producer.
+Version 0.1 will use **controlled sample data** for a fictional crude-oil business unit.
 
-The system will eventually read a small input file containing fields such as:
+The system will eventually read small input files representing physical exposure, hedge exposure, and a scenario.
+
+Core fields will include items such as:
 
 | Field | Meaning |
 |---|---|
-| exposure_id | Unique identifier for the exposure |
+| exposure_id | Unique identifier for the physical exposure |
+| business_unit | Portfolio or business-unit label |
 | commodity | Commodity being analyzed |
+| location | Delivery or exposure location |
+| delivery_month | Period in which exposure occurs |
 | volume | Physical quantity exposed |
 | volume_unit | Unit of the physical quantity |
 | reference_price | Starting market price |
-| hedge_ratio | Percentage of exposure hedged |
+| hedge_id | Unique identifier for a hedge |
 | hedge_instrument | Instrument used for the hedge |
+| contract_month | Hedge contract month |
+| contracts | Number of futures contracts |
 | contract_multiplier | Quantity represented by one futures contract |
 
 The first scenario will be a simple flat-price move.
@@ -78,12 +88,14 @@ Example:
 
 The engine must calculate:
 
-1. physical price impact,
-2. futures hedge impact,
-3. net flat-price result,
-4. hedged volume,
-5. unhedged volume,
-6. hedge percentage.
+1. gross physical exposure,
+2. hedged volume,
+3. unhedged volume,
+4. hedge percentage,
+5. physical price impact,
+6. futures hedge impact,
+7. net flat-price result,
+8. calculation trace.
 
 ---
 
@@ -104,7 +116,7 @@ The first version will **not** include:
 - dashboards,
 - user accounts,
 - AI commentary,
-- ETRM integrations,
+- live ETRM integrations,
 - automated trading,
 - trade recommendations.
 
@@ -160,6 +172,10 @@ If required fields are missing, units are invalid, or values cannot be interpret
 
 Data loading, validation, calculation, and reporting should be separate pieces of the system.
 
+### Integration readiness
+
+Prototype files should be modeled so that later enterprise inputs can arrive from ETRM exports, APIs, databases, or approved market-data feeds without replacing the analytical core.
+
 ### No numerical dependence on an LLM
 
 If AI is added later, it may translate user language into structured inputs or explain results. It will not calculate official portfolio numbers.
@@ -170,13 +186,14 @@ If AI is added later, it may translate user language into structured inputs or e
 
 v0.1 is complete only when:
 
-- sample exposure data loads successfully,
+- sample exposure and hedge data load successfully,
 - invalid inputs are rejected clearly,
 - hedge coverage is calculated correctly,
 - one flat-price scenario is calculated correctly,
 - results match a hand-calculated example,
 - automated tests verify the main calculations,
 - outputs are understandable without reading source code,
+- every material result can be traced to its inputs and formula,
 - documentation explains all assumptions.
 
 If any of these fail, development does not advance to the next stage.
