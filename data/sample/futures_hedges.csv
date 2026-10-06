@@ -1,0 +1,2 @@
+hedge_id,business_unit,commodity,hedge_instrument,contract_month,direction,contracts,contract_multiplier,volume_unit,reference_futures_price,currency,source_type,source_name
+HEDGE-WTI-001,Crude Production,WTI,NYMEX WTI Futures,2026-11-01,short,75,1000,bbl,70.00,USD,synthetic,controlled_sample
