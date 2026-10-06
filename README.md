@@ -4,9 +4,13 @@ A research and analytics platform for commodity exposure, scenario analysis, ris
 
 ## Status
 
-**Step 0 — Product and enterprise-pilot definition complete**
+**Step 1 — Project skeleton complete**
 
 The project is being designed around a **large-enterprise crude market-risk workflow**, while the first implementation remains intentionally small and uses controlled synthetic data.
+
+The repository now contains a runnable Python package, automated smoke tests, a synthetic-data area, and GitHub Actions continuous integration. Commodity calculations have **not** been added yet; that work begins only after the project foundation is proven.
+
+**Next:** Step 2 — controlled enterprise-shaped sample data.
 
 ## Initial product
 
@@ -23,6 +27,89 @@ The first version will use a fictional crude-oil business unit and deterministic
 The long-term product is intended to sit **above existing ETRM, market-data, spreadsheet, and operational systems** as an analytical and decision-support layer.
 
 The first design target is a crude Market Risk / Supply & Trading Analytics workflow. A future commercial entry point would be a narrow desk-level proof of value rather than an enterprise-wide replacement project.
+
+## Current repository structure
+
+```text
+commodity-decision-intelligence/
+├── .github/workflows/          # Automated tests
+├── data/sample/                # Synthetic prototype data only
+├── src/
+│   └── commodity_decision_intelligence/
+│       ├── __init__.py
+│       ├── __main__.py
+│       └── health.py
+├── tests/                      # Automated Python tests
+├── DATA_POLICY.md
+├── ENTERPRISE_PILOT.md
+├── PROJECT_SPEC.md
+├── ROADMAP.md
+└── pyproject.toml
+```
+
+## Run the project locally
+
+### 1. Install Python
+
+Use Python 3.11 or newer.
+
+Check your installed version:
+
+```bash
+python --version
+```
+
+On some systems the command is:
+
+```bash
+python3 --version
+```
+
+### 2. Create a virtual environment
+
+From the repository folder:
+
+```bash
+python -m venv .venv
+```
+
+Activate it on Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Activate it on macOS or Linux:
+
+```bash
+source .venv/bin/activate
+```
+
+### 3. Install the project and test tools
+
+```bash
+python -m pip install -e ".[dev]"
+```
+
+### 4. Run the package
+
+```bash
+python -m commodity_decision_intelligence
+```
+
+Expected output:
+
+```text
+commodity-decision-intelligence | status=ok | stage=step-1-project-skeleton
+```
+
+### 5. Run the automated tests
+
+```bash
+python -m pytest
+```
+
+A passing test run confirms that the basic project skeleton is working.
 
 ## Design principles
 
