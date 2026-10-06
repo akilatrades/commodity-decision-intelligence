@@ -1,0 +1,2 @@
+exposure_id,business_unit,commodity,location,delivery_month,volume,volume_unit,reference_price,currency,source_type,source_name
+EXP-WTI-001,Crude Production,WTI,"Cushing, OK",2026-11-01,100000,bbl,70.00,USD,synthetic,controlled_sample
