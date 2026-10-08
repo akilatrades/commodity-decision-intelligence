@@ -10,7 +10,7 @@ The intended rename is `commodity-decision-intelligence` → `petchem-feedstock-
 | `energy-commodity-var-engine` | VaR and Expected Shortfall for a refiner hedge book, with EWMA filtering, backtests and contract-roll diagnostics. | `energy-trading`, `commodities`, `risk-management`, `var`, `expected-shortfall`, `backtesting`, `python` |
 | `petchem-feedstock-margins` (currently `commodity-decision-intelligence`) | Public ethane, propane and polyethylene benchmarks, with mass balances, margin scenarios and feedstock hedge analysis. | `petrochemicals`, `polyethylene`, `commodities`, `hedging`, `risk-management`, `python` |
 | `nfl-dfs-projection-analysis` | NFL projection analysis exploring forecast uncertainty and prediction performance. | `nfl`, `sports-analytics`, `forecasting`, `python` |
-| `akilatrades` | Research analyst benchmarking polyolefins plants; projects in energy trading, commodity risk and quantitative analysis. | `profile-readme`, `energy-trading`, `commodities`, `risk-management`, `petrochemicals` |
+| `akilatrades` | Background in polyolefins benchmarking; projects in energy trading, commodity risk and quantitative analysis. | `profile-readme`, `energy-trading`, `commodities`, `risk-management`, `petrochemicals` |
 
 The storage study is a directory inside the WTI repository, so it has no separate GitHub About panel.
 
@@ -27,7 +27,7 @@ gh repo edit akilatrades/wti-producer-hedge-simulator --description "WTI produce
 gh repo edit akilatrades/energy-commodity-var-engine --description "VaR and Expected Shortfall for a refiner hedge book, with EWMA filtering, backtests and contract-roll diagnostics." --add-topic energy-trading,commodities,risk-management,var,expected-shortfall,backtesting,python
 gh repo edit akilatrades/commodity-decision-intelligence --description "Public ethane, propane and polyethylene benchmarks, with mass balances, margin scenarios and feedstock hedge analysis." --add-topic petrochemicals,polyethylene,commodities,hedging,risk-management,python
 gh repo edit akilatrades/nfl-dfs-projection-analysis --description "NFL projection analysis exploring forecast uncertainty and prediction performance." --add-topic nfl,sports-analytics,forecasting,python
-gh repo edit akilatrades/akilatrades --description "Research analyst benchmarking polyolefins plants; projects in energy trading, commodity risk and quantitative analysis." --add-topic profile-readme,energy-trading,commodities,risk-management,petrochemicals
+gh repo edit akilatrades/akilatrades --description "Background in polyolefins benchmarking; projects in energy trading, commodity risk and quantitative analysis." --add-topic profile-readme,energy-trading,commodities,risk-management,petrochemicals
 gh repo rename petchem-feedstock-margins --repo akilatrades/commodity-decision-intelligence --yes
 ```
 
