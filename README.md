@@ -4,9 +4,10 @@ How much of a polyethylene producer's margin can a feedstock hedge protect?
 
 The [petchem feedstock project](projects/petchem-feedstock) follows public ethane and propane benchmarks through an explicit ethylene-to-PE mass balance. In the 13-quarter historical sample, the ethane-route domestic LDPE contribution proxy rises from **33.5 cents/lb in 2019 to 61.2 cents/lb in 2021–2022Q1**, despite more expensive ethane. A feedstock hedge controls one input risk; it leaves product prices and basis exposed.
 
-These are illustrative contribution proxies using public historical benchmarks and stated process assumptions, not estimates of any company's profit. No employer or client information is included.
+The 2021 expansion coincides with product-supply disruption and recovering demand. The project connects the price data to Winter Storm Uri and lingering hurricane-related inventory shortages, then separates feedstock protection from remaining product-price exposure.
 
-- [Model, findings and limitations](projects/petchem-feedstock/README.md)
+- [Model and findings](projects/petchem-feedstock/README.md)
+- [Assumptions and limitations](projects/petchem-feedstock/README.md#limitations)
 - [Public source provenance](projects/petchem-feedstock/SOURCES.md)
 - [Saved chart and results](projects/petchem-feedstock/outputs)
 

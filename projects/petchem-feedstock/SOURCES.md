@@ -1,6 +1,6 @@
 # Public benchmark provenance
 
-The input file transcribes a small historical benchmark table from Westlake's public SEC earnings exhibits. Each row carries its source and publication date. Prices are quarterly averages in cents/lb: Mont Belvieu purity ethane; Mont Belvieu non-TET propane; North American spot ethylene; domestic net-transaction and export LDPE general-purpose film benchmarks. These are industry benchmarks attributed by the issuer to IHS Markit, not actual company realizations or a comprehensive licensed price feed.
+The input file transcribes a small historical benchmark table from Westlake's public SEC earnings exhibits. Each row carries its source and publication date. Prices are quarterly averages in cents/lb: Mont Belvieu purity ethane; Mont Belvieu non-TET propane; North American spot ethylene; domestic net-transaction and export LDPE general-purpose film benchmarks. The issuer attributes these industry benchmarks to IHS Markit.
 
 | Quarters used | Public exhibit | Publication date |
 |---|---|---|
@@ -9,8 +9,12 @@ The input file transcribes a small historical benchmark table from Westlake's pu
 | 2021Q1–Q4 | [2021 annual presentation](https://www.sec.gov/Archives/edgar/data/1262823/000126282322000011/ex992_20211231investorpr.htm) | 2022-02-22 |
 | 2022Q1 | [2022Q1 presentation](https://www.sec.gov/Archives/edgar/data/1262823/000126282322000019/ex992_20220331wlkearning.htm) | 2022-05-03 |
 
-This uses the specified later disclosure vintages, not a point-in-time tradeable dataset. For example, 2020Q1 export LDPE is 39.4 in the 2020 annual release versus 38.9 in the earlier Q1 release. No values have been interpolated. A quarter's average is not available at the quarter's start; nothing here trades on that assumption.
+The dataset uses the specified later disclosure vintages. For example, 2020Q1 export LDPE is 39.4 in the 2020 annual release versus 38.9 in the earlier Q1 release. Values are transcribed without interpolation; publication dates preserve when each vintage became available.
 
-The [2022Q2 presentation](https://www.sec.gov/Archives/edgar/data/1262823/000126282322000039/ex992_20220630wlkearning.htm) states that average quarterly industry prices are no longer being provided. The sample therefore stops at 2022Q1. It is deliberately presented as a historical case study, not current market monitoring.
+The [2022Q2 presentation](https://www.sec.gov/Archives/edgar/data/1262823/000126282322000039/ex992_20220630wlkearning.htm) states that average quarterly industry prices are no longer being provided. The sample therefore stops at 2022Q1.
 
-No proprietary employer data, internal plant benchmarks or client information is included. Yield, conversion cost and coproduct assumptions belong to the model, not these sources.
+## Market context
+
+[Westlake's Q2 2021 Form 10-Q](https://www.sec.gov/Archives/edgar/data/1262823/000126282321000059/wlk-20210630.htm), MD&A / Olefins Segment, links higher prices to February plant shutdowns and recovering economic activity. It also reports reduced polyethylene availability following the freeze and continuing inventory shortages from the prior year's hurricanes. This supports the README's market explanation; the model measures the price effect without estimating a separate causal contribution for each event.
+
+Process assumptions and the study's scope are collected in the [limitations section](README.md#limitations).
