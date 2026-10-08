@@ -1,4 +1,4 @@
-# Feedstock costs, polyethylene margins and hedge decisions
+# Petchem feedstock margins
 
 How much of a polyethylene producer's margin can a feedstock hedge protect?
 
@@ -26,3 +26,7 @@ The petchem project's reproduction instructions and dependencies are in its own 
 ## What I learned / what I would do differently
 
 Making the mass balance explicit matters more than adding a dashboard: feedstock and polymer prices cannot be subtracted one-for-one when their quantities differ. A correct input hedge still leaves a business exposed to its product price. The next improvement is a defensible coproduct slate and independently sourced process-cost ranges, followed by a longer price history.
+
+## License
+
+Original code is available under the [MIT License](LICENSE). Public benchmark sources and data provenance are documented in [source notes](projects/petchem-feedstock/SOURCES.md).
