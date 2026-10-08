@@ -1,0 +1,14 @@
+quarter,ethane_cents_lb,propane_cents_lb,ethylene_cents_lb,ldpe_domestic_cents_lb,ldpe_export_cents_lb,publication_date,source_url
+2019Q1,10,15.7,17,60,44,2020-05-04,https://www.sec.gov/Archives/edgar/data/1262823/000126282320000013/ex991200331earningsrel.htm
+2019Q2,7.1,12.8,13.7,63,42.8,2020-05-04,https://www.sec.gov/Archives/edgar/data/1262823/000126282320000013/ex991200331earningsrel.htm
+2019Q3,5.8,10.3,20.7,59,39.7,2020-05-04,https://www.sec.gov/Archives/edgar/data/1262823/000126282320000013/ex991200331earningsrel.htm
+2019Q4,6.3,11.8,22.8,54,37.7,2021-02-23,https://www.sec.gov/Archives/edgar/data/1262823/000126282321000014/ex991_201231earningsreleas.htm
+2020Q1,4.7,8.8,15.8,52.3,39.4,2021-02-23,https://www.sec.gov/Archives/edgar/data/1262823/000126282321000014/ex991_201231earningsreleas.htm
+2020Q2,6.4,9.6,11,49,38.5,2021-02-23,https://www.sec.gov/Archives/edgar/data/1262823/000126282321000014/ex991_201231earningsreleas.htm
+2020Q3,7.4,11.9,19.3,61,45.7,2021-02-23,https://www.sec.gov/Archives/edgar/data/1262823/000126282321000014/ex991_201231earningsreleas.htm
+2020Q4,7.1,13.5,24,67.7,53.2,2021-02-23,https://www.sec.gov/Archives/edgar/data/1262823/000126282321000014/ex991_201231earningsreleas.htm
+2021Q1,8.1,21.2,45.1,78,76.3,2022-02-22,https://www.sec.gov/Archives/edgar/data/1262823/000126282322000011/ex992_20211231investorpr.htm
+2021Q2,8.7,20.7,43,99,89.7,2022-02-22,https://www.sec.gov/Archives/edgar/data/1262823/000126282322000011/ex992_20211231investorpr.htm
+2021Q3,11.7,27.6,48,109,86,2022-02-22,https://www.sec.gov/Archives/edgar/data/1262823/000126282322000011/ex992_20211231investorpr.htm
+2021Q4,13.2,29.5,35.4,92,72.7,2022-02-22,https://www.sec.gov/Archives/edgar/data/1262823/000126282322000011/ex992_20211231investorpr.htm
+2022Q1,13.5,30.7,37.6,79.3,69.6,2022-05-03,https://www.sec.gov/Archives/edgar/data/1262823/000126282322000019/ex992_20220331wlkearning.htm
