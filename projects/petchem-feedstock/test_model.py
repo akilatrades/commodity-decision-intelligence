@@ -1,5 +1,4 @@
 import pytest
-
 from model import Route, hedged_contribution, margin
 
 
