@@ -1,0 +1,33 @@
+{
+  "input_sha256": "c7d17fc5785873ebc11ae486470bdbc560644145f29c2c2b58aa9fb1026ae08d",
+  "routes": {
+    "ethane": {
+      "ethylene_yield": 0.8,
+      "polymer_yield": 0.98,
+      "cracking_cost_cents_lb_ethylene": 10,
+      "polymer_cost_cents_lb_pe": 6,
+      "coproduct_credit_cents_lb_feed": 0
+    },
+    "propane": {
+      "ethylene_yield": 0.42,
+      "polymer_yield": 0.98,
+      "cracking_cost_cents_lb_ethylene": 10,
+      "polymer_cost_cents_lb_pe": 6,
+      "coproduct_credit_cents_lb_feed": 0
+    }
+  },
+  "units": "Prices cents/lb; scenario dollars divide by 100",
+  "benchmark": "IHS Markit industry benchmarks disclosed by Westlake, not its realized prices",
+  "scope": "Historical 13-quarter case study, not a current margin monitor or trading backtest",
+  "scenario": "2022Q1 price used as ASSUMED fixed swap strike, not an observed executable quote",
+  "omissions": [
+    "fixed costs",
+    "actual energy consumption",
+    "freight",
+    "grade/location basis",
+    "working capital",
+    "hedge fees/collateral",
+    "plant-specific coproduct slate"
+  ],
+  "coproduct_warning": "Zero credit base case intentionally does not establish comparative route profitability"
+}

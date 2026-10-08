@@ -1,23 +1,27 @@
-# Commodity exposure prototype
+# Feedstock costs, polyethylene margins and hedge decisions
 
-If a producer changes its production forecast or futures hedge, how does its exposure change?
+How much of a polyethylene producer's margin can a feedstock hedge protect?
 
-This repository does not answer that question yet. It currently has typed inputs, deterministic CSV loaders, a small synthetic WTI dataset and tests. The exposure calculations are still to be built. It is an early research prototype.
+The [petchem feedstock project](projects/petchem-feedstock) follows public ethane and propane benchmarks through an explicit ethylene-to-PE mass balance. In the 13-quarter historical sample, the ethane-route domestic LDPE contribution proxy rises from **33.5 cents/lb in 2019 to 61.2 cents/lb in 2021–2022Q1**, despite more expensive ethane. A feedstock hedge controls one input risk; it leaves product prices and basis exposed.
 
-## Current scope
+These are illustrative contribution proxies using public historical benchmarks and stated process assumptions, not estimates of any company's profit. No employer or client information is included.
 
-The sample represents fictional physical exposure, futures positions and a price scenario. No client data, live positions or measured business results are included.
+- [Model, findings and limitations](projects/petchem-feedstock/README.md)
+- [Public source provenance](projects/petchem-feedstock/SOURCES.md)
+- [Saved chart and results](projects/petchem-feedstock/outputs)
+
+## Earlier exposure prototype
+
+The `src/commodity_decision_intelligence` package remains a separate early prototype: typed inputs, deterministic CSV loaders and synthetic WTI sample data. It does not yet perform a complete physical-exposure calculation. Its tests check ingestion and package health.
 
 ```bash
-python -m pip install -e ".[dev]"
-python -m commodity_decision_intelligence
+pip install -e ".[dev]"
 python -m pytest
+python -m commodity_decision_intelligence
 ```
 
-Passing tests currently verify package health and sample-data ingestion, not a complete risk calculation.
+The petchem project's reproduction instructions and dependencies are in its own directory.
 
 ## What I learned / what I would do differently
 
-A working loader is useful groundwork, but it is not an analytical finding. I would complete one hand-checkable exposure calculation before expanding the product description. The next gate is to reconcile physical P&L plus futures P&L to a manually calculated example, including the case of a full hedge.
-
-[Research scope](PROJECT_SPEC.md) · [Next steps](ROADMAP.md) · [Data policy](DATA_POLICY.md)
+Making the mass balance explicit matters more than adding a dashboard: feedstock and polymer prices cannot be subtracted one-for-one when their quantities differ. A correct input hedge still leaves a business exposed to its product price. The next improvement is a defensible coproduct slate and independently sourced process-cost ranges, followed by a longer price history.
