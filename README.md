@@ -11,6 +11,13 @@ The 2021 expansion coincides with product-supply disruption and recovering deman
 - [Public source provenance](projects/petchem-feedstock/SOURCES.md)
 - [Saved chart and results](projects/petchem-feedstock/outputs)
 
+## Physical crude book
+
+The [physical crude book](projects/physical-crude-book) does a desk's month-end work in SQL on a synthetic book of Permian and Cushing purchases sold into Houston, priced off a WTI CMA proxy built from real prices: contract pricing, ticket-based delivery checks, invoice reconciliation, flat-price positions and book P&L. The reconciliation finds the four planted invoice breaks and the short delivery, and the position report shows 10,000 bbl of a fixed-price sale left unhedged.
+
+- [Reports and findings](projects/physical-crude-book/README.md)
+- [SQL queries](projects/physical-crude-book/sql)
+
 ## Earlier exposure prototype
 
 The `src/commodity_decision_intelligence` package remains a separate early prototype: typed inputs, deterministic CSV loaders and synthetic WTI sample data. It does not yet perform a complete physical-exposure calculation. Its tests check ingestion and package health.

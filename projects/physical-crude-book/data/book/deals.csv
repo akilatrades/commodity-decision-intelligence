@@ -1,0 +1,9 @@
+deal_id,counterparty,side,location,delivery_month,contract_bbl,pricing_type,fixed_price,differential,tolerance_pct
+D001,Permian Producer A,BUY,Midland,2026-08,150000,CMA,,0.85,5.0
+D002,Permian Producer B,BUY,Midland,2026-08,90000,FIXED,81.9,,5.0
+D003,Gulf Coast Refiner C,SELL,Houston,2026-08,120000,CMA,,1.35,5.0
+D004,Exporter D,SELL,Houston,2026-08,120000,CMA,,1.2,5.0
+D005,Permian Producer A,BUY,Midland,2026-09,150000,CMA,,0.8,5.0
+D006,Cushing Seller E,BUY,Cushing,2026-09,60000,CMA,,0.0,5.0
+D007,Gulf Coast Refiner C,SELL,Houston,2026-09,150000,CMA,,1.4,5.0
+D008,Exporter D,SELL,Houston,2026-09,60000,FIXED,93.0,,5.0

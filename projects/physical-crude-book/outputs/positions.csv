@@ -1,0 +1,3 @@
+delivery_month,bought_bbl,sold_bbl,net_physical_bbl,fixed_price_bbl,swap_bbl,net_flat_price_bbl
+2026-08,240000,240000,0,90000,-90000,0
+2026-09,210000,210000,0,-60000,50000,-10000
