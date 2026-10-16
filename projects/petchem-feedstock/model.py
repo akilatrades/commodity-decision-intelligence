@@ -43,12 +43,12 @@ def margin(feed, ethylene, pe, route):
     )
     polymer = pe - ethylene / route.polymer_yield - route.polymer_cost_cents_lb_pe
     integrated = cracker / route.polymer_yield + polymer
-    return dict(
-        cracker_proxy_cents_lb_ethylene=cracker,
-        polymer_proxy_cents_lb_pe=polymer,
-        integrated_proxy_cents_lb_pe=integrated,
-        feed_lb_per_lb_pe=route.feed_lb_per_lb_pe,
-    )
+    return {
+        "cracker_proxy_cents_lb_ethylene": cracker,
+        "polymer_proxy_cents_lb_pe": polymer,
+        "integrated_proxy_cents_lb_pe": integrated,
+        "feed_lb_per_lb_pe": route.feed_lb_per_lb_pe,
+    }
 
 
 def hedged_contribution(
@@ -73,9 +73,9 @@ def hedged_contribution(
     feed_volume = pe_volume_lb * route.feed_lb_per_lb_pe
     # A consumer buys feedstock: a LONG fixed-price swap gains when its index rises.
     swap = feed_volume * hedge_fraction * (benchmark_settle - fixed_price) / 100
-    return dict(
-        physical_contribution_usd=physical,
-        swap_pnl_usd=swap,
-        hedged_contribution_usd=physical + swap,
-        feed_volume_lb=feed_volume,
-    )
+    return {
+        "physical_contribution_usd": physical,
+        "swap_pnl_usd": swap,
+        "hedged_contribution_usd": physical + swap,
+        "feed_volume_lb": feed_volume,
+    }

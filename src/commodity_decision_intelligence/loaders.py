@@ -5,11 +5,11 @@ validation is introduced in Roadmap Step 5. Parsing here is deliberately small
 and deterministic so the raw CSV fields map visibly into typed records.
 """
 
+from collections.abc import Iterable
 from csv import DictReader
 from datetime import date
 from decimal import Decimal
 from pathlib import Path
-from typing import Iterable
 
 from commodity_decision_intelligence.models import (
     FuturesHedge,

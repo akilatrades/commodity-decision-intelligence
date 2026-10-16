@@ -126,14 +126,14 @@ def main():
     plt.close(fig)
     (out / "assumptions.json").write_text(
         json.dumps(
-            dict(
-                input_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
-                routes={k: asdict(v) for k, v in routes.items()},
-                units="Prices cents/lb; scenario dollars divide by 100",
-                benchmark="IHS Markit industry benchmarks disclosed by Westlake, not its realized prices",
-                scope="Historical 13-quarter case study, not a current margin monitor or trading backtest",
-                scenario="2022Q1 price used as ASSUMED fixed swap strike, not an observed executable quote",
-                omissions=[
+            {
+                "input_sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+                "routes": {k: asdict(v) for k, v in routes.items()},
+                "units": "Prices cents/lb; scenario dollars divide by 100",
+                "benchmark": "IHS Markit industry benchmarks disclosed by Westlake, not its realized prices",
+                "scope": "Historical 13-quarter case study, not a current margin monitor or trading backtest",
+                "scenario": "2022Q1 price used as ASSUMED fixed swap strike, not an observed executable quote",
+                "omissions": [
                     "fixed costs",
                     "actual energy consumption",
                     "freight",
@@ -142,8 +142,8 @@ def main():
                     "hedge fees/collateral",
                     "plant-specific coproduct slate",
                 ],
-                coproduct_warning="Zero credit base case intentionally does not establish comparative route profitability",
-            ),
+                "coproduct_warning": "Zero credit base case intentionally does not establish comparative route profitability",
+            },
             indent=2,
         )
         + "\n"

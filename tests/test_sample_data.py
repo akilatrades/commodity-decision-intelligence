@@ -25,7 +25,7 @@ def test_physical_exposure_fields_are_preserved() -> None:
     assert exposure.commodity == "WTI"
     assert exposure.location == "Cushing, OK"
     assert exposure.delivery_month == date(2026, 11, 1)
-    assert exposure.volume == Decimal("100000")
+    assert exposure.volume == Decimal(100000)
     assert exposure.volume_unit == "bbl"
     assert exposure.reference_price == Decimal("70.00")
     assert exposure.currency == "USD"
@@ -43,7 +43,7 @@ def test_futures_hedge_fields_are_preserved() -> None:
     assert hedge.contract_month == date(2026, 11, 1)
     assert hedge.direction == "short"
     assert hedge.contracts == 75
-    assert hedge.contract_multiplier == Decimal("1000")
+    assert hedge.contract_multiplier == Decimal(1000)
     assert hedge.volume_unit == "bbl"
     assert hedge.reference_futures_price == Decimal("70.00")
     assert hedge.currency == "USD"
